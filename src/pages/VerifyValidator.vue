@@ -27,7 +27,7 @@
                 <br /><span class="text-medium">Note:</span> For this option you need to have a node running on localhost.</small>
               </div>
               <div class="text-subtitle2">
-                <small id="label"> Send 0.1 AVAX to <span style="cursor: pointer;font-size: 13px;" class="text-secondary text-bold" @click="copyToClipboard(admin)">{{ admin }}</span> for smart contract writing fees!</small>
+                <small id="label"> Send 0.1 DJT to <span style="cursor: pointer;font-size: 13px;" class="text-secondary text-bold" @click="copyToClipboard(admin)">{{ admin }}</span> for smart contract writing fees!</small>
               </div>
             </q-card-section>
           </q-card>
@@ -48,7 +48,7 @@
                 Avalanche Wallet.</small>
               </div>
               <div class="text-subtitle2">
-                <small id="label"> Send 0.1 AVAX to <span style="cursor: pointer;font-size: 13px;" class="text-secondary text-bold" @click="copyToClipboard(admin)">{{ admin }}</span> for smart contract writing fees!</small>
+                <small id="label"> Send 0.1 DJT to <span style="cursor: pointer;font-size: 13px;" class="text-secondary text-bold" @click="copyToClipboard(admin)">{{ admin }}</span> for smart contract writing fees!</small>
               </div>
             </q-card-section>
           </q-card>
@@ -72,7 +72,7 @@
             </div>
             <div class="text-subtitle2" v-else>
               <p id="label">
-                Send 0.1 AVAX  <br />to <span style="cursor: pointer;font-size: 15px;" class="text-secondary text-bold" @click="copyToClipboard(admin)">{{ admin }}</span> for smart contract writing fees!
+                Send 0.1 DJT  <br />to <span style="cursor: pointer;font-size: 15px;" class="text-secondary text-bold" @click="copyToClipboard(admin)">{{ admin }}</span> for smart contract writing fees!
               </p>
               <p>
                 Grab your TXID, paste it in the field below and click "Send" to obtain your verification code!
@@ -120,7 +120,7 @@
           <q-card-section style="min-height: 125px;" v-if="!isSearchSuccess">
             <div class="text-subtitle2">
               <p id="label">
-                <p>Sign Message from <a style="color: #634875;font-size: 14px;" href="https://wallet.avax.network/">Avalanche Wallet/Advanced</a> and prove ownership of validator.</p>
+                <p>Sign Message from <a style="color: #634875;font-size: 14px;" href="https://wallet.dijets.io/">Dijets Wallet/Advanced</a> and prove ownership of validator.</p>
                 <img style="width: 350vw;max-width: 350px;margin-left: 10%;" src="~assets/instruction2.png"/>
                 <p>
                   Sign from address:
@@ -164,7 +164,7 @@
               <div class="q-mb-xl text-h6">Successful Verification!</div>
               <div class="text-subtitle2">
                 <p id="label">
-                  Send 0.1 AVAX  <br />to <span style="cursor: pointer;font-size: 15px;" class="text-secondary text-bold" @click="copyToClipboard(admin)">{{ admin }}</span> for smart contract writing fees!
+                  Send 0.1 DJTX  <br />to <span style="cursor: pointer;font-size: 15px;" class="text-secondary text-bold" @click="copyToClipboard(admin)">{{ admin }}</span> for smart contract writing fees!
                 </p>
                 <p>
                   Grab your TXID, paste it in the field below and click "Send" to obtain your verification code!
@@ -400,11 +400,11 @@ export default {
 </script>
 <style scoped>
  #verify-card:hover {
-   background: #aa7dc9;
+   background: #3fcf8e;
    color: white;
  }
   #verify-card2:hover {
-   background:#aa7dc9;
+   background:#3fcf8e;
    color: white!important;
  }
 </style>

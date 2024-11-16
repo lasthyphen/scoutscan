@@ -176,7 +176,7 @@
             <div v-else-if="col.name === 'remainingCapacity'">
                {{ col.value }}
                <span class="text-accent text-medium">
-                 <small> AVAX</small>
+                 <small> DJT</small>
                </span>
             </div>
             <div v-else-if="col.name === 'stakeAmount'">
@@ -239,7 +239,7 @@
               v-bind:countdown="col.value"
               v-bind:color="getIsDelegatable(props.row.isMinimumAmountForStake)"
               v-else-if="col.name === 'remainingTime'"
-              style="min-width: 180px;"
+              style="min-width: 180px; gap: 4px;"
             />
             <div v-else v-html="col.value"></div>
           </q-td>
@@ -320,20 +320,20 @@
             </q-card-section>
             <q-card-section horizontal>
               <q-card-section>
-                <div class="text-panel q-mb-md">Stake (AVAX)</div>
+                <div class="text-panel q-mb-md">Stake (DJT)</div>
                 <small class="text-panel">Own</small>
                 {{ getFormatReward(props.row.stakeAmount)}}
-                <small class="text-accent"> AVAX</small>
+                <small class="text-accent"> DJT</small>
                 <div>
                   <small class="text-panel">Delegated</small>
                   {{ getFormatReward(props.row.delegateStake) }}
-                  <small class="text-accent"> AVAX</small>
+                  <small class="text-accent"> DJT</small>
                 </div>
                 <q-separator class="q-mt-xs q-mb-xs" :dark="appTheme==='dark'"/>
                 <div>
                   <small class="text-panel">Total</small>
                   {{ getFormatReward(props.row.totalStakeAmount)}}
-                  <small class="text-accent"> AVAX</small>
+                  <small class="text-accent"> DJT</small>
                 </div>
               </q-card-section>
             </q-card-section>
@@ -346,7 +346,7 @@
               <span>
                   <span class="text-panel q-mt-md">Capacity</span>
                   {{ getFormatReward(props.row.remainingCapacity) }}
-                  <small class="text-accent"> AVAX</small>
+                  <small class="text-accent"> DJT</small>
                 </span>
                 <br />
                 <br />
@@ -497,7 +497,7 @@ export default {
         {
           name: 'stakeAmount',
           align: 'left',
-          label: 'STAKE (AVAX)',
+          label: 'STAKE (DJT)',
           field: row => Number(row.stakeAmount),
           format: (val, row) => `${this.getFormatReward(val)}`,
           sortable: true,

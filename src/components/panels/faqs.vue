@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="flex flex-center text-h2 q-pt-xl text-white">FAQ</div>
-    <div class="flex flex-center q-pl-xl text-h7 q-pt-xl q-mb-xl text-white">
+    <div class="flex flex-center text-h2 q-pt-xl text-panel">FAQ</div>
+    <div class="flex flex-center q-pl-xl text-h7 q-pt-xl q-mb-xl text-panel">
       Let's answer some questions you may have.
       <q-btn no-caps flat v-if="!visible" @click="visible=!visible" icon="expand_more"/>
       <q-btn no-caps flat v-else @click="visible=!visible" icon="expand_less"/>
@@ -14,7 +14,7 @@
               <q-slide-transition>
                 <div v-show="visible">
                   <div class="text-h3 text-panel">. <span class="text-h6">{{question.title}}</span></div>
-                  <q-separator spaced style="width: 50%;" class="q-pt-xs"/>
+                  <q-separator spaced style="width: 50%;" class=""/>
                   <div v-html="question.content" style="font-size: 14px;padding-right: 20%;margin-bottom: 50px;"></div>
               </div>
               </q-slide-transition>
@@ -35,12 +35,12 @@ export default {
       innerVisible: true,
       questions: [
         {
-          title: 'Who can be an Avalanche validator?',
-          content: 'Anyone who covers the minimum hardware and staking amount requirements can become a validator on Avalanche.'
+          title: 'Who can be a Dijets validator?',
+          content: 'Anyone who covers the minimum hardware and staking amount requirements can become a validator on Dijets.'
         },
         {
-          title: 'What are the requirements for running a validator node on Avalanche?',
-          content: 'Avalanche is an incredibly lightweight protocol, so the minimum computer requirements are quite modest. <br /> Hardware: CPU > 2 GHz, RAM > 4 GB, Storage > 10 GB free space.<br />The minimum stake requirement for Avalanche Mainnet is 2000 AVAX.'
+          title: 'What are the requirements for running a validator node on Dijets?',
+          content: 'Dijets is an incredibly lightweight protocol, so the minimum computer requirements are quite modest. <br /> Hardware: CPU > 2 GHz, RAM > 4 GB, Storage > 10 GB free space.<br />The minimum stake requirement for Dijets Mainnet is 2000 DJT.'
         },
         {
           title: 'Do I need to trust the validator to transfer my delegation rewards?',
@@ -80,7 +80,7 @@ export default {
         },
         {
           title: 'I need help, where can I receive technical support?',
-          content: 'Avalanche Discord is the place to be for all technical questions, join at <a style="text-decoration: none;" class="text-purple" href="http://chat.avax.network">chat.avax.network</a> or join at VScout Discord <a style="text-decoration: none;" class="text-purple" href="https://discord.gg/PPB67JYyAp">vscout chat</a>. '
+          content: 'Dijets Discord is the place to be for all technical questions, join at <a style="text-decoration: none;" class="text-purple" href="http://chat.avax.network">chat.avax.network</a> or join at VScout Discord <a style="text-decoration: none;" class="text-purple" href="https://discord.gg/PPB67JYyAp">vscout chat</a>. '
         }
       ]
     }

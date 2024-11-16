@@ -359,7 +359,6 @@ export function getAvatar (id) {
   const Md5 = makeMD5()
   const hash = Md5.hex(id)
   return {
-    monster: `https://www.gravatar.com/avatar/${hash}?d=monsterid&s=150`,
     avatar: `https://www.gravatar.com/avatar/${hash}?d=identicon&s=150`
   }
 }

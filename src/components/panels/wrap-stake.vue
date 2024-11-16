@@ -32,6 +32,6 @@ export default {
 </script>
 <style scoped>
   #custom-card {
-    border-right: 2px solid #aa7dc9;
+    border-right: 2px solid #3fcf8e;
   }
 </style>

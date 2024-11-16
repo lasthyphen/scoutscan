@@ -5,10 +5,10 @@
     </div>
     <div class="row">
       <div class="col">
-        <div class="q-pb-xs q-pt-xs" >
+        <div class="q-pb-md q-pt-xs" >
         <span
           v-if="currentSubnet.blockchainsId"
-          class="q-pb-md q-pt-xs text-panel text-title1"
+          class="q-pb-md q-pt-xs text-purple font-medium text-title1"
         >
           {{ currentSubnet.blockchainsId.length }}
         </span>

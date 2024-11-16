@@ -16,7 +16,7 @@
           <MapChart
             style="z-index: 30;"
             :countryData="peersMap"
-            highColor="#aa7dc9"
+            highColor="#3fcf8e"
             defaultCountryFillColor="#ffffff"
             legendBoxShadowCss="0px 0px 15px #fff"
             :showLegend="true"
@@ -51,7 +51,7 @@
           <MapChart
             style="z-index: 30;"
             :countryData="peersMap"
-            highColor="#aa7dc9"
+            highColor="#3fcf8e"
             defaultCountryFillColor="#ffffff"
             legendBoxShadowCss="0px 0px 15px #fff"
             :showLegend="true"
@@ -135,7 +135,6 @@
     </div>
   </q-page>
 </template>
-
 <script>
 import { mapGetters } from 'vuex'
 
@@ -258,7 +257,7 @@ export default {
         {
           name: 'stake',
           align: 'left',
-          label: 'STAKE (AVAX)',
+          label: 'STAKE (DJTX)',
           field: row => row.stake,
           headerClasses: 'text-medium'
         },

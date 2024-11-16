@@ -1,9 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 97 88" width="600" height="544">
 	<style>
 		tspan { white-space:pre }
-		.shp0 { fill: #aa7dc9;stroke: #aa7dc9;stroke-width: 0.7 } 
+		.shp0 { fill: #3fcf8e;stroke: #3fcf8e;stroke-width: 0.7 } 
 		.shp1 { fill: #674182;stroke: #674182;stroke-width: 0.7 } 
-		.shp2 { display: none;fill: #aa7dc9 } 
+		.shp2 { display: none;fill: #3fcf8e } 
 		.shp3 { display: none;fill: #674182;stroke: #674182;stroke-width: 0.1 } 
 	</style>
 	<path id="Layer 1" class="shp0" d="M73 9L8 9L19 28L51 28L45 38L24 38L27 43L49 43L60 23L22 23L17 14L70 14L73 9Z" />

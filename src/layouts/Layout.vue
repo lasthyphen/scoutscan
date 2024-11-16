@@ -33,7 +33,7 @@
       <q-page-sticky
         position="top"
         class="z-max"
-        :offset="[0, 18]"
+        :offset="[0, 24]"
         v-if="!hasNetworkConnection"
       >
         <q-btn
@@ -332,9 +332,9 @@ export default {
     margin-left: 12px;
   }
   #header-line {
-   height: 3px;
+   height: 2px;
    width: 100%;
-   background:#aa7dc9;
+   background: #434343;
    opacity: 0.75;
  }
 </style>

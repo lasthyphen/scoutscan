@@ -87,12 +87,12 @@
           <div class="text-subtitle2">
             <small class="text-panel">OWN </small>
             <span> {{ getFormatReward(validator.stakeAmount) }}</span>
-            <span class="text-accent text-medium"><small> AVAX</small></span>
+            <span class="text-accent text-medium"><small> DJT</small></span>
           </div>
           <div class="text-subtitle2">
             <small class="text-panel">DELEGATED </small>
             <span> {{ getFormatReward(validator.delegateStake) }}</span>
-            <span class="text-accent text-medium"><small> AVAX</small></span>
+            <span class="text-accent text-medium"><small> DJT</small></span>
           </div>
         </q-card-section>
 
@@ -102,7 +102,7 @@
           <div class="text-subtitle2">
             <small class="text-panel">TOTAL </small>
             <span> {{ getFormatReward(validator.totalStakeAmount) }}</span>
-            <span class="text-accent text-medium"><small> AVAX</small></span>
+            <span class="text-accent text-medium"><small> DJT</small></span>
           </div>
         </q-card-actions>
       </q-card>
@@ -117,12 +117,12 @@
           <div class="text-subtitle2">
             <small class="text-panel">POTENTIAL REWARD </small>
             <span> {{ getFormatReward(validator.potentialReward) }}</span>
-            <span class="text-accent text-medium"><small> AVAX</small></span>
+            <span class="text-accent text-medium"><small> DJT</small></span>
           </div>
           <div class="text-subtitle2">
             <small class="text-panel">DELEGATION FEES REWARD</small>
             <span> {{ potentialRewardFromDelegators() }}</span>
-            <span class="text-accent text-medium"><small> AVAX</small></span>
+            <span class="text-accent text-medium"><small> DJT</small></span>
           </div>
         </q-card-section>
 
@@ -132,7 +132,7 @@
           <div class="text-subtitle2">
             <small class="text-panel">TOTAL </small>
             <span> {{ totalReward() }}</span>
-            <span class="text-accent text-medium"><small> AVAX</small></span> /
+            <span class="text-accent text-medium"><small> DJT</small></span> /
             <span>  {{ totalRewardUsd() }}</span>
             <span class="text-accent text-medium"><small> {{ getISO(currentCurrency) }} </small></span>
           </div>
@@ -170,7 +170,7 @@
           <div class="text-subtitle2">
             <small class="text-panel">DELEGATIONS CAPACITY</small>
             <span> {{ getFormatReward(validator.remainingCapacity) }}</span>
-            <span class="text-accent text-medium"><small> AVAX</small></span>
+            <span class="text-accent text-medium"><small> DJT</small></span>
           </div>
           <div class="text-subtitle2 q-mt-md">
             <small class="text-panel">REMAINING TIME </small>
@@ -200,8 +200,8 @@
         <q-card-section>
           <div class="text-subtitle2 q-mb-md">
             <small class="text-panel">RANK  </small>
-            <q-icon name="img:statics/star.svg" size="1.5em" />
-            <span>{{ validator.rank }}</span>
+            <q-icon name="img:statics/star.svg" size="1em" />
+            <span class="q-ml-xs">{{ validator.rank }}</span>
           </div>
           <div class="text-subtitle2">
             <small class="text-panel">NETWORK SHARE </small>

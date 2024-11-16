@@ -36,15 +36,15 @@ export default {
   created () {
     Promise.all([
       _getCHeight({
-        endpoint: 'https://api.avax.network:443/',
-        bcID: 'C' // this.bcID
+        endpoint: 'https://dijetsnet.uksouth.cloudapp.azure.com:443/',
+        bcID: 'U' // this.bcID
       }),
       _getCChainID({
-        endpoint: 'https://api.avax.network:443/',
+        endpoint: 'https://dijetsnet.uksouth.cloudapp.azure.com:443/',
         bcID: this.bcID
       }),
       _getCNetworkVersion({
-        endpoint: 'https://api.avax.network:443/',
+        endpoint: 'https://dijetsnet.uksouth.cloudapp.azure.com:443/',
         bcID: this.bcID
       })])
       .then((res) => console.log(res))

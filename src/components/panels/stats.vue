@@ -63,7 +63,7 @@
             :formatValue="format"
             :duration="3000"
           />
-          <span class="label-title2"><small> AVAX</small></span>
+          <span class="label-title2"><small> DJT</small></span>
         </div>
       </div>
       <div class="col-1 q-pt-md icon">
@@ -83,7 +83,7 @@
             :formatValue="format"
             :duration="3000"
           />
-          <span class="label-title2"><small> AVAX</small></span>
+          <span class="label-title2"><small> DJT</small></span>
         </div>
       </div>
     </div>
@@ -278,7 +278,7 @@ export default {
    max-width:30px;
  }
  .label-title {
-  font-size: max(0.7vw, 12px);
+  font-size: max(0.7vw, 14px);
  }
  .text-title1 {
     font-size: max(0.8vw, 16px);

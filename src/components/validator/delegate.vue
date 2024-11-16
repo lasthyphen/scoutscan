@@ -29,7 +29,7 @@
       <div class="q-pl-sm">
         <span class="text-subtitle2"><small style="opacity: 0.8;">DELEGATION CAPACITY</small></span>
         <span class="on-right">{{ getFormatAva(remainingCapacity) }}</span>
-        <span class="text-accent text-medium q-pl-xs" style="font-size: 12px;">AVAX</span>
+        <span class="text-accent text-medium q-pl-xs" style="font-size: 12px;">DJT</span>
       </div>
 
       <div class="text-subtitle2 q-pl-sm">
@@ -52,7 +52,7 @@
           POTENTIAL YIELD
         </small></span>
         <span class="on-right">{{ potentialYield }}</span>
-        <span class="text-accent text-medium q-pl-xs" style="font-size: 12px;">AVAX</span>
+        <span class="text-accent text-medium q-pl-xs" style="font-size: 12px;">DJTX</span>
         <q-list dense class="q-mt-md  q-pt-sm q-pl-xs" style="max-width: 400px;">
           <q-item>
             <q-item-section>
@@ -79,17 +79,17 @@
               :dark="appTheme==='dark'"
               outlined
               type="number"
-              v-model="avax"
+              v-model="djt"
               label="Staking Amount"
               input-class="text-right"
-              suffix="AVAX"
+              suffix="DJT"
               color="accent"
               :disable="remainingCapacity < 25 || getRemainingTimeDays < 14"
               label-color="accent"
               @input="calculate"
               :rules="[
-                value => (value >= 25) || 'The minimum amount that a delegator must stake is 25 AVAX!',
-                value => (value <= remainingCapacity) || `The maximum delegation capacity is ${getFormatAva(remainingCapacity)} AVAX!`
+                value => (value >= 25) || 'The minimum amount that a delegator must stake is 25 DJT!',
+                value => (value <= remainingCapacity) || `The maximum delegation capacity is ${getFormatAva(remainingCapacity)} DJT!`
               ]"
             >
               <template v-slot:prepend>
@@ -129,7 +129,7 @@ export default {
   watch: {
     remainingCapacity: function (val) {
       this.time = this.getRemainingTimeDays
-      this.avax = val
+      this.djt = val
       this.calculate()
     }
   },
@@ -138,13 +138,13 @@ export default {
   },
   created () {
     this.time = this.getRemainingTimeDays
-    this.avax = this.remainingCapacity
+    this.djt = this.remainingCapacity
     this.calculate()
   },
   data () {
     return {
       time: 14,
-      avax: 25,
+      djt: 25,
       potentialYield: 0
     }
   },

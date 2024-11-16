@@ -1,11 +1,11 @@
 export const c = {
   // enpoints
-  cChainWs: 'ext/C/ws',
-  listAssests: 'x/assets',
+  cChainWs: 'ext/U/ws',
+  listAssests: 'v2/assets',
   nodeVersions: 'validators',
-  getTxApi: (id) => `x/transactions/${id}`,
-  assestById: (id) => `x/assets/${id}`,
-  assetsWithOffset: (offset) => `x/assets?offset=${offset}&limit=100`,
+  getTxApi: (id) => `v2/transactions/${id}`,
+  assestById: (id) => `v2/assets/${id}`,
+  assetsWithOffset: (offset) => `v2/assets?offset=${offset}&limit=100`,
 
   // INFO API
   info: 'ext/info',
@@ -17,17 +17,17 @@ export const c = {
 
   // HEALTH API
   health: 'ext/health',
-  getLiveness: 'health.getLiveness',
+  getLiveness: 'health.readiness',
 
   // EVM API
-  evm: (id) => `ext/bc/${id}/rpc`,
+  evm: (id) => 'ext/bc/U/rpc',
   ethBlockNumber: 'eth_blockNumber',
   ethChainID: 'eth_chainId',
   ethNetVersion: 'net_version',
 
   // PLATFORM API
-  platform: 'ext/P',
-  platformBc: 'ext/bc/P',
+  platform: 'ext/M',
+  platformBc: 'ext/bc/M',
   getTx: 'platform.getTx',
   getUtxos: 'platform.getUTXOs',
   validates: 'platform.validates',
@@ -51,16 +51,16 @@ export const c = {
 }
 
 //  Denominations of value
-export const NanoAvax = 1
-export const MicroAvax = 1000 * NanoAvax
-export const Schmeckle = 49 * MicroAvax + 463 * NanoAvax
-export const MilliAvax = 1000 * MicroAvax
-export const Avax = 1000 * MilliAvax
-export const KiloAvax = 1000 * Avax
-export const MegaAvax = 1000 * KiloAvax
+export const NanoDjtx = 1
+export const MicroDjtx = 1000 * NanoDjtx
+export const Schmeckle = 49 * MicroDjtx + 463 * NanoDjtx
+export const MilliDjtx = 1000 * MicroDjtx
+export const Djtx = 1000 * MilliDjtx
+export const KiloDjtx = 1000 * Djtx
+export const MegaDjtx = 1000 * KiloDjtx
 
 // SupplyCap is the maximum amount of AVAX that should ever exist
-export const SupplyCap = 720 * MegaAvax
+export const SupplyCap = 111 * MegaDjtx
 
 // MaxSubMinConsumptionRate is the % consumption that incentivizes staking
 export const maxSubMinConsumptionRate = 20000 // 2%
@@ -78,7 +78,7 @@ export const maximumStakingDuration = 365 * 24 * 60
 // Stake duration
 export const stakeDuration = (stakeTime) => stakeTime * 24 * 60
 
-export const GENEZIS_ID = 'FvwEAhmxKfeiG8SnEvq42hc6whRyY3EFYAvebMqDNDGCgxN5Z'
+export const GENEZIS_ID = '2U4xzjHGnxXKWzFKqVZVMEnnepKFRNcBC75346X129Nj7uzyP1'
 
 // messages
 export const successTxHash = (txHash) => `Transaction hash is ${txHash}. Your transaction is being broadcasted to the blockchain! Please hold on!`

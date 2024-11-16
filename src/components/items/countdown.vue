@@ -59,12 +59,12 @@ export default {
 <style scoped>
   .count-down {
     border-style: solid;
-    border-width: 0.5px;
+    border-width: 0.8px;
     border-radius: 5px;
     margin-right: 2px;
   }
   #label {
-    font-size: 8px;
+    font-size: 6px;
     text-align: center;
   }
   #value {

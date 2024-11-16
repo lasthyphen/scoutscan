@@ -111,7 +111,7 @@
                   outlined
                   clearable
                   v-model="link"
-                  placeholder="https://www.vscout.io"
+                  placeholder="https://www.dijets-validator.io"
                   label="Hyperlink (link)"
                   hint="Your website/business link or other hyperlink target."
                   :rules="[val => !val.startsWith('http:') || 'Content should be loaded over HTTPS!']"
@@ -164,12 +164,12 @@
             style="width: 45vw;max-width: 45px;margin: auto;"
             src="https://wallet.avax.network/img/diamond-primary.6818c3c7.svg"
           />
-          <q-btn icon="close" class="text-white" flat round dense v-close-popup />
+          <q-btn icon="close" class="text-purple" flat round dense v-close-popup />
         </q-card-section>
         <q-card-section style="min-height: 125px;">
           <div class="text-subtitle2">
             <p id="label">
-              <p><span class="text-panel">Send</span> 0.1 <span class="text-medium text-accent"><small> AVAX</small></span></p>
+              <p><span class="text-panel">Send</span> 0.1 <span class="text-medium text-accent"><small> DJT</small></span></p>
               <p>
                 <span class="text-panel">To:</span>
                 <span

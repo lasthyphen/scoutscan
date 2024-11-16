@@ -8,6 +8,6 @@ export default function () {
     peersMap: {},
     networkEndpoint: network.endpointUrls[0],
     currentSubnet: { id: network.defaultSubnetID },
-    currentBlockchain: { subnetID: network.defaultSubnetID, name: 'X-Chain' }
+    currentBlockchain: { subnetID: network.defaultSubnetID, name: 'Value Chain' }
   }
 }

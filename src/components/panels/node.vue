@@ -1,10 +1,9 @@
 <template>
   <q-card
-    class="q-pt-md q-pl-xl q-pr-xs q-ml-xs q-pb-md panel2" id="custom-card" >
-    <div class="row">
-      <div class="col-md-3 col-xs-10">
+    class="q-pt-md q-pl-xl q-pr-xs q-ml-xs q-pb-md panely2" id="custom-card" >
+      <div class="col-md-3 col-xs-10 panely3">
         <div v-if="isValidatorShow(nodeID)" style="cursor: pointer;" @click="copyToClipboard(nodeID)">
-          <div class="q-pb-md text-medium label-title">NODE - VALIDATOR</div>
+          <div class="q-pb-md text-medium label-title clippy">NODE - VALIDATOR</div>
           <div class="text-h7 text-panel q-pb-md q-pt-xs text-title1">{{ formatNodeID }}</div>
           <tooltip-style v-bind:text="'Copy to Clipboard'" />
         </div>
@@ -17,15 +16,10 @@
           <node-health-dialog ref="nodeHealthDialog" v-bind:validator="validatorById(nodeID) ? validatorById(nodeID) : {}"/>
         </div>
       </div>
-      <div class="col-1 q-pt-md icon">
-        <img src="~assets/ribbon.svg" v-if="isValidatorShow(nodeID)" id="logo2" />
-        <img src="~assets/node1.svg" v-else id="logo2">
-      </div>
-      <q-separator class="q-mt-md q-mb-md lt-md" />
-      <div class="col-md-3 col-xs-10">
-        <div class="q-pb-md text-medium label-title">PEER CONNECTIONS</div>
+      <div class="col-md-3 col-xs-10 panely3">
+        <div class="q-pb-md text-medium label-title clippy">PEER CONNECTIONS</div>
         <div class="q-pb-md" style="font-size: max(0.8vw, 12px);" v-if="peersLength > 0">
-         <small>Connected with</small>
+         <small class="text-purple">Connected with</small>
          <div class="text-panel">
             <animated-number
               :value="peersLength"
@@ -40,28 +34,20 @@
             size="2em"
           />
         </div>
-        <q-btn outline label="Peers" no-caps size="sm" @click="$router.push('/peers/' + nodeID)" />
+        <q-btn class="text-purple" outline label="Peers" no-caps size="sm" @click="$router.push('/peers/' + nodeID)" />
       </div>
-      <div class="col-1 q-pt-md icon">
-        <img src="~assets/peers.svg" id="logo2"/>
-      </div>
-      <q-separator class="q-mt-md q-mb-md lt-md"/>
-      <div class="col-md-3 col-xs-10">
-        <div class="q-pb-md text-medium label-title">
+      <div class="col-md-3 col-xs-10 panely3">
+        <div class="q-pb-md text-medium label-title clippy">
           ENDPOINT
           <q-spinner-ball v-if="ui.doesItConnect" />
         </div>
         <div class="q-pb-md">
-          <div class="text-panel text-title1">{{ networkEndpoint.name }}</div>
+          <div class="text-purple text-title1">{{ networkEndpoint.name }}</div>
         </div>
         <div class="q-mt-md label-title">
-          <span class="q-pt-xl">{{ networkEndpoint.urlView }}</span>
+          <span class="q-pt-xl text-panel">{{ networkEndpoint.urlView }}</span>
         </div>
       </div>
-      <div class="col-1 q-pt-md icon">
-        <img src="~assets/computer-network.svg" id="logo2">
-      </div>
-    </div>
   </q-card>
 </template>
 
@@ -145,7 +131,7 @@ export default {
    max-width:30px;
  }
  .label-title {
-    font-size: max(0.7vw, 12px);
+    font-size: max(0.7vw, 14px);
   }
   .text-title1 {
     font-size: max(0.8vw, 14.5px);

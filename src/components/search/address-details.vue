@@ -5,7 +5,7 @@
         <div class="q-mb-md q-pt-xl">
           BALANCE ({{ asset }})
           <q-btn :label="getISO(currentCurrency)" class="q-ml-md" size="xs" color="accent" v-if="!isUsd" outline @click="takeUSD" />
-          <q-btn label="AVAX" class="q-ml-md" size="xs" color="accent" v-else outline @click="takeAVAX" />
+          <q-btn label="DJT" class="q-ml-md" size="xs" color="accent" v-else outline @click="takeAVAX" />
         </div>
         <div>
           <span class="text-subtitle2"><small style="opacity: 0.8;">UNLOCKED</small></span>
@@ -77,7 +77,7 @@
             >
             <div v-if="col.name === 'amount'">
               <span>{{ col.value }}</span>
-              <span class="text-accent text-medium q-pl-xs" style="font-size: 12px;">AVAX</span>
+              <span class="text-accent text-medium q-pl-xs" style="font-size: 12px;">DJT</span>
             </div>
             <!--<div v-else-if="col.name === 'txID'">
               <router-link :to="'/tx/' + col.value">{{ col.value }}</router-link>
@@ -170,7 +170,7 @@ export default {
         rowsPerPage: 5
       },
       isUsd: false,
-      asset: 'AVAX',
+      asset: 'DJT',
       filter: '',
       outputs: [],
       columns: [
@@ -191,7 +191,7 @@ export default {
         {
           name: 'amount',
           align: 'left',
-          label: 'AMOUNT (AVAX)',
+          label: 'AMOUNT (DJT)',
           field: row => row.amount,
           headerClasses: 'text-medium'
         },
@@ -244,7 +244,7 @@ export default {
     },
     takeAVAX () {
       this.isUsd = false
-      this.asset = 'AVAX'
+      this.asset = 'DJT'
     },
     getAmount (val) {
       if (!val) return

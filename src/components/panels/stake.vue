@@ -1,7 +1,7 @@
 <template>
     <div class="row">
       <div class="col-md-3 col-xs-10">
-        <div class="q-pb-md text-medium label-title">VALIDATORS / DELEGATIONS</div>
+        <div class="q-pb-md text-medium label-title clippy">VALIDATORS / DELEGATIONS</div>
         <div>
           <span class="text-panel text-title1">
             <animated-number
@@ -32,12 +32,12 @@
           /> </span> <span class="label-title2"> <small> PENDING</small></span>
         </small>
       </div>
-      <div class="col-1 q-pt-md icon">
+      <div class="col-1 q-pt-md icon icca">
         <img src="~assets/validators.png" class="custom-icon">
       </div>
       <q-separator  class="q-mt-md q-mb-md lt-md"/>
       <div class="col-md-3 col-xs-10">
-        <div class="q-pb-md text-medium label-title">TOTAL STAKE</div>
+        <div class="q-pb-md text-medium label-title clippy">TOTAL STAKE</div>
         <div class="text-title1">
             <span class="text-panel">
               <animated-number
@@ -46,7 +46,7 @@
                 :duration="3000"
               />
             </span>
-            <span class="label-title2"><small> AVAX</small></span>
+            <span class="label-title2"><small> DJT</small></span>
         </div>
         <span class="text-panel label-title2"><animated-number
           :value="getReward(stakedAVAX)"
@@ -57,12 +57,12 @@
           <small> {{ getISO(currentCurrency) }}</small>
         </span>
       </div>
-      <div class="col-1 q-pt-md icon">
+      <div class="col-1 q-pt-md icon icca">
         <img src="~assets/stake.png" class="custom-icon">
       </div>
       <q-separator class="q-mt-md q-mb-md lt-md"/>
       <div class="col-md-3 col-xs-10">
-       <div class="q-pb-md text-medium label-title">VALIDATION / DELEGATED STAKE</div>
+       <div class="q-pb-md text-medium label-title clippy">VALIDATION / DELEGATED STAKE</div>
        <div class="text-title1" style="min-width: 320px;">
         <span class="text-panel">
             <animated-number
@@ -77,7 +77,7 @@
               :duration="2000"
             />
          </span>
-        <span class="label-title2"> <small> AVAX</small></span>
+        <span class="label-title2"> <small> DJT</small></span>
       </div>
       <span class="text-panel label-title2">
         <animated-number
@@ -199,7 +199,7 @@ export default {
    max-width:30px;
  }
  .label-title {
-  font-size: max(0.7vw, 12px);
+  font-size: max(0.7vw, 14px);
  }
  .text-title1 {
     font-size: max(0.8vw, 16px);

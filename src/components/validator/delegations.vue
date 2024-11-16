@@ -17,8 +17,8 @@
       <div class="col-6" @click="copyToClipboard(delegationRewardOwner(delegation.rewardOwner))">
         {{ getFormatSubstr(delegationRewardOwner(delegation.rewardOwner)) }}
       </div>
-      <div class="col-3">{{ getFormatAva(delegation.stakeAmount) }}<span class="text-accent text-medium q-pl-xs" style="font-size: 12px;">AVAX</span></div>
-      <div class="col-3">{{ potentialRewardFromDelegator(delegation.potentialReward) }}<span class="text-accent text-medium q-pl-xs" style="font-size: 12px;">AVAX</span></div>
+      <div class="col-3">{{ getFormatAva(delegation.stakeAmount) }}<span class="text-accent text-medium q-pl-xs" style="font-size: 12px;">DJT</span></div>
+      <div class="col-3">{{ potentialRewardFromDelegator(delegation.potentialReward) }}<span class="text-accent text-medium q-pl-xs" style="font-size: 12px;">DJT</span></div>
     </div>
     </q-scroll-area>
   </div>

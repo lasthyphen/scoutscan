@@ -8,7 +8,7 @@
         <q-item  :dark="appTheme==='dark'">
           <q-item-section avatar>
             <q-avatar>
-              <img src="./../../statics/blockchain.svg" />
+              <img src="./../../statics/blockchain.svg" class="iccu" />
             </q-avatar>
             </q-item-section>
             <q-item-section>
@@ -30,7 +30,7 @@
             <span v-else><span>Healthy: </span>  <span class="text-negative">No</span></span>
             <div v-if="upTime">
               <span>Uptime: </span>
-              <q-badge :color="getColorUptime(upTime)">
+              <q-badge :color="getColorUptime(upTime)" class="bg-accent">
                 {{ upTime }} %
               </q-badge>
               <div>
@@ -168,7 +168,7 @@
           </q-item-section>
           <q-separator vertical :dark="appTheme==='dark'" />
           <q-item-section class="q-pl-md">
-            <span class="q-mb-md text-green">X-Chain</span>
+            <span class="q-mb-md text-green">Value Chain</span>
             <div class="q-pt-md">
               <small>Timestamp: </small>
               <small class="text-panel">{{ getDateFormat(x.timestamp) }}</small>

@@ -12,7 +12,7 @@
         <span class="text-accent text-medium" v-if="state">CONNECTED</span>
         <span class="text-negative text-medium" v-else>
             DISCONNECTED
-            <q-icon name="info" @click="onClick('https://docs.avax.network/learn/platform-overview/staking#why-is-my-uptime-low')"/>
+            <q-icon name="info" @click="onClick('https://dijets-docs.vercel.app/')"/>
             <tooltip-style v-bind:text="'Why is my uptime low? Read more...'" />
         </span>
         </div>

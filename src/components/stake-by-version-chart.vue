@@ -1,6 +1,6 @@
 <template>
   <div class="q-mt-md">
-     <div class="q-pl-lg text-panel"><small><q-icon name="info" /><i> S - STAKE (AVAX)</i></small></div>
+     <div class="q-pl-lg text-panel"><small><q-icon name="info" /><i> S - STAKE (DJT)</i></small></div>
      <div class="q-pl-lg">
         <canvas
          :id="id"

@@ -317,7 +317,7 @@ module.exports = {
           const endpoint = 'http://' + peers[index].ip.split(':')[0] + ':9650'
 
           const response = await axios
-            .post(endpoint + '/ext/P', body('platform.getHeight'))
+            .post(endpoint + '/ext/M', body('platform.getHeight'))
 
           if (response.data.result) {
             let currentValidator = fs
@@ -451,7 +451,7 @@ function process ({
     delegatedStake
     }) {
 
-    // get all staked AVAX
+    // get all staked DJT
     const allStake = BigNumber
       .sum(validatedStake, delegatedStake)
 

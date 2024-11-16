@@ -34,10 +34,10 @@ export const verify = (message, signature) => {
 
   const networkId = avax.getNetworkID()
   const hrp = getPreferredHRP(networkId)
-  const keypair = new KeyPair(hrp, 'X')
+  const keypair = new KeyPair(hrp, 'V')
   const signedBuff = bintools.cb58Decode(signature)
   const pubKey = keypair.recover(digestBuff, signedBuff)
   const addressBuff = keypair.addressFromPublicKey(pubKey)
-  const address = bintools.addressToString(hrp, 'X', addressBuff)
+  const address = bintools.addressToString(hrp, 'V', addressBuff)
   return address
 }

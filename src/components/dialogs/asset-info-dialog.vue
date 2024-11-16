@@ -62,7 +62,7 @@ export default {
     }),
     toUrl (url) {
       this.close()
-      openURL('https://explorer.avax.network/tx/' + url)
+      openURL('https://explorer.dijets.io/tx/' + url)
     },
     getCurrentSupply (value, denomination) {
       let returnValue = Number(value)

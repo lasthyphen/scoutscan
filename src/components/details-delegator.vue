@@ -17,7 +17,7 @@
             />
           </small>
         </div>
-        <div v-if="delegator.potentialReward > 0" class="text-medium"><span style="opacity: 0.3;">Potential Reward:</span>  {{ getAvaxFromNAvax(delegator.potentialReward) }} <span class="text-accent">AVAX</span> | <span class="text-accent">{{ getSymbol(currentCurrency) }}</span> {{ getPriceFromAvax(delegator.potentialReward) }}</div>
+        <div v-if="delegator.potentialReward > 0" class="text-medium"><span style="opacity: 0.3;">Potential Reward:</span>  {{ getAvaxFromNAvax(delegator.potentialReward) }} <span class="text-accent">DJT</span> | <span class="text-accent">{{ getSymbol(currentCurrency) }}</span> {{ getPriceFromAvax(delegator.potentialReward) }}</div>
         <div><span class="text-medium" style="opacity: 0.3;">Stake Period:</span>   {{ validatePeriod }} </div>
         <div><span class="text-medium" style="opacity: 0.3;">Start Time:</span> {{ startDate }} <small>({{ fromNowGet }})</small></div>
         <div><span class="text-medium" style="opacity: 0.3;">End Time:</span>  {{ endDate }}</div>

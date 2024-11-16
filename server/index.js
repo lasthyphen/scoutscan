@@ -14,7 +14,7 @@ require('./config/routes')(app)
 app.listen(config.port, () => console.log(`Server start on port ${config.port}`))
 
 // const endpoint = 'http://135.181.144.201:9650'
-const endpoint =  'http://54.183.141.180:9650'
+const endpoint = 'https://dijetsnet.uksouth.cloudapp.azure.com:443'
 
 // let endpoints = getEndpoints()
 

@@ -118,7 +118,7 @@
               <div style="min-width: 250px;border-left: 0.1px solid #9c929c;" class="panel2" @mouseover="listOver=true" @mouseleave="listOver=false">
                 <q-item class="panel">
                   <q-item-section class="text-medium" :dark="appTheme==='dark'">
-                    1.00 AVAX = {{ getSymbol(currentCurrency) }} {{ getValue() }}
+                    1.00 DJT = {{ getSymbol(currentCurrency) }} {{ getValue() }}
                   </q-item-section>
                 </q-item>
                 <q-separator />
@@ -153,32 +153,6 @@
           <q-btn flat size="sm" icon="nights_stay" v-if="appTheme === 'default'" @click="switchTheme('dark')" />
           <q-btn flat size="sm" icon="wb_sunny" v-else @click="switchTheme('default')" />
           <notify-btn />
-        </q-toolbar>
-        <q-toolbar class="dark-panel">
-          <q-toolbar-title>
-            <img src="~assets/vscout-logo-full.svg" class="q-pt-xs" style="width: 120px;">
-          </q-toolbar-title>
-          <span v-if="isValidatorShow(nodeID)" style="min-width: 300px;margin-right: 15%;">
-            <countdown class="row" v-bind:color="'#ffffff'" v-bind:textColor="'white'" v-bind:countdown="getRemainigTime()" />
-            <tooltip-style v-bind:text="'Remaining validation time for ' + nodeID  + ''" />
-          </span>
-          <q-bar>
-            <q-input
-              outlined
-              :dark="appTheme==='dark'"
-              stack-label
-              color="purple"
-              autofocus
-              style="min-width: 450px;"
-              placeholder="Search Validator/Blockchain/Subnet/P-address"
-              clearable v-model="filter"
-              @keydown.enter.prevent="search"
-            >
-              <template v-slot:append>
-                <q-icon name="search" @click="search"/>
-              </template>
-            </q-input>
-          </q-bar>
         </q-toolbar>
       </div>
       <!--sm view-->
@@ -254,7 +228,7 @@
               <div style="min-width: 250px;border-left: 0.1px solid #9c929c;" class="panel2">
                 <q-item class="panel">
                   <q-item-section class="text-medium" :dark="appTheme==='dark'">
-                    1.00 AVAX = {{ getSymbol(currentCurrency) }} {{ getValue() }}
+                    1.00 DJT = {{ getSymbol(currentCurrency) }} {{ getValue() }}
                   </q-item-section>
                 </q-item>
                 <q-separator />
@@ -359,24 +333,6 @@
               v-bind:countdown="getRemainigTime()"
             />
           </span>
-        </div>
-        <div class="background-orange q-pb-md">
-          <q-bar class="q-pb-sm q-pt-sm">
-            <q-input
-              outlined
-              dark
-              stack-label
-              color="purple"
-              style="min-width: 100%;"
-              placeholder="Search Validator/Blockchain/Subnet/P-address"
-              clearable v-model="filter"
-              @keydown.enter.prevent="search"
-            >
-              <template v-slot:append>
-                <q-icon name="search" @click="search"/>
-              </template>
-            </q-input>
-          </q-bar>
         </div>
       </div>
       <div id="header-line"></div>
@@ -485,7 +441,7 @@
               <q-dialog v-model="isC" transition-show="rotate" transition-hide="rotate">
                 <q-card>
                   <q-card-section class="text-purple text-medium">
-                    1.00 AVAX = {{ getSymbol(currentCurrency) }} {{ getValue() }}
+                    1.00 DJT = {{ getSymbol(currentCurrency) }} {{ getValue() }}
                   </q-card-section>
 
                   <q-card-section class="q-pt-none">
@@ -539,7 +495,7 @@
       <q-page-sticky
         position="top"
         class="z-max"
-        :offset="[0, 18]"
+        :offset="[0, 24]"
         v-if="!hasNetworkConnection"
       >
         <q-btn
@@ -699,7 +655,7 @@ export default {
       if (!id) return
       const isVal = this.validatorById(id)
       if (isVal) {
-        return this.networkEndpoint.url.startsWith('http://127.0.0.1')
+        return this.networkEndpoint.url.startsWith('https://dijetsnet.uksouth.cloudapp.azure.com:443/')
       }
       return false
     },
@@ -900,7 +856,7 @@ export default {
   #header-line {
    height: 3px;
    width: 100%;
-   background:#aa7dc9;
+   background: #434343;
    opacity: 0.75;
  }
 </style>

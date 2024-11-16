@@ -133,7 +133,7 @@
             <div v-else-if="col.name === 'stake' || col.name === 'potentialReward'">
               {{ col.value }}
               <span class="text-accent text-medium">
-                <small> AVAX</small>
+                <small> DJT</small>
               </span>
             </div>
             <countdown
@@ -141,7 +141,7 @@
               v-bind:countdown="col.value"
               v-bind:color="'#86b9b0'"
               v-else-if="col.name === 'remainingTime'"
-              style="min-width: 180px;"
+              style="min-width: 180px; gap: 4px;"
             />
             <div v-else>
               {{ col.value }}

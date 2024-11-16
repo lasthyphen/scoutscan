@@ -16,18 +16,18 @@
     <div class="row q-pt-sm q-pl-xs lt-lg">
       <div class="col-md-2 col-xs-12">
         <div class="q-pt-md q-pl-md">
-          <div class="q-pb-md text-medium text-white label-title">NETWORK</div>
-          <div style="text-transform: uppercase;font-size: max(1.1vw, 12px);" class="text-purple">
+          <div class="q-pb-md text-medium text-panel label-title">NETWORK</div>
+          <div style="text-transform: uppercase;font-size: 14px;" class="text-purple">
             {{ nodeInfo.networkName }}
           </div>
           <div class="q-pt-md label-title">
-            <span class="text-medium text-white">Network ID</span>
+            <span class="text-medium text-purple">Network ID</span>
             <span class="text-purple label-title">
               {{ nodeInfo.networkID }}
             </span>
           </div>
-          <div>
-            <span class="text-medium text-white label-title">Version</span>
+          <div style="padding-top: 8px;">
+            <span class="text-medium text-purple label-title">Version</span>
             <span class="text-purple label-title">
               {{ nodeInfo.version ? nodeInfo.version : nodeInfo.nodeVersion }}
             </span>
@@ -35,12 +35,12 @@
         </div>
       </div>
       <div class="col-md-3 col-xs-12 q-pl-md">
-        <div class="q-pb-md q-pt-md text-medium text-white label-title">PEERS</div>
+        <div class="q-pb-md q-pt-md text-medium text-purple label-title">PEERS</div>
           <div class="q-mr-lg" @click="$router.push('/peers/' + nodeID)">
             <MapChart
               style="z-index: 30;"
               :countryData="peersMap"
-              highColor="#aa7dc9"
+              highColor="#3fcf8e"
               defaultCountryFillColor="#ffffff"
               legendBoxShadowCss="0px 0px 15px #fff"
               :showLegend="true"
@@ -72,31 +72,34 @@
         />
       </div>
     </div>
-    <div class="row q-pt-sm q-pr-sm">
+    <div class="row q-pt-lg q-pr-sm">
       <div class="col-md-2 col-xs-12 gt-md">
         <div class="q-pt-sm q-pl-sm">
-          <div class="q-pb-md text-medium text-white label-title">NETWORK</div>
-          <div style="text-transform: uppercase;font-size: max(1.1vw, 12px);" class="text-purple">
+          <div class="q-pb-md text-medium text-panel label-title">NETWORK</div>
+          <q-separator class="q-separator q-mt-sm q-mb-sm q-separator q-separator--horizontal" />
+          <div style="text-transform: uppercase; font-size: 14px;" class="text-purple">
             {{ nodeInfo.networkName }}
           </div>
-          <div class="q-pt-md label-title">
-            <span class="text-medium text-white">Network ID</span>
+          <q-separator class="q-separator q-mt-sm q-mb-sm q-separator q-separator--horizontal" />
+          <div class="label-title">
+            <span class="text-medium text-purple">Network ID</span>
             <span class="text-purple label-title">
               {{ nodeInfo.networkID }}
             </span>
           </div>
-          <div>
-            <span class="text-medium text-white label-title">Version</span>
+          <q-separator class="q-separator q-mt-sm q-mb-sm q-separator q-separator--horizontal" />
+          <div style="padding-top: 8px;" >
+            <span class="text-purple label-title" style="font-size: 13.5px">Version</span>
             <span class="text-purple label-title">
               {{ nodeInfo.version ? nodeInfo.version : nodeInfo.nodeVersion }}
             </span>
           </div>
-          <div class="q-pb-md q-pt-md text-medium text-white label-title">PEERS</div>
+          <div class="q-pb-md q-pt-md text-purple label-title" style="font-size: 11px">PEERS</div>
           <div @click="$router.push('/peers/' + nodeID)">
             <MapChart
               style="z-index: 30;"
               :countryData="peersMap"
-              highColor="#aa7dc9"
+              highColor="#3fcf8e"
               defaultCountryFillColor="#ffffff"
               legendBoxShadowCss="0px 0px 15px #fff"
               :showLegend="true"
@@ -106,7 +109,7 @@
           </div>
         </div>
         <q-separator class="q-mt-md q-mb-sm" />
-        <div class="q-pl-sm q-pb-sm q-pt-md text-medium text-white label-title">VERSION DISTRIBUTION</div>
+        <div class="q-pl-sm q-pb-sm q-pt-md text-purple label-title" style="font-size: 11px">VERSION DISTRIBUTION</div>
         <div style="max-width: 300px!important;">
           <node-version-chart
             v-bind:id="'barDown'"
@@ -226,7 +229,7 @@ export default {
 
 <style scoped>
  .label-title {
-  font-size: max(0.7vw, 12px);
+  font-size: max(0.7vw, 14px);
  }
   .label-title2 {
     font-size: max(0.55vw, 12px);

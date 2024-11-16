@@ -6,7 +6,7 @@
         style="width:30vw;max-width:150px;"
       >
     </p>
-    <p class="text-faded text-white">
+    <p class="text-faded text-purple">
       Service is temporarily unavailable, please try again later!
     </p>
     <!--<q-btn

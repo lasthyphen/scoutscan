@@ -39,12 +39,12 @@
           v-model="stakeAmount"
           label="Staking Amount"
           input-class="text-right"
-          suffix="$AVAX"
+          suffix="$DJT"
           color="accent"
           @input="calculate"
           class="q-pb-sm"
           :rules="[
-            value => (value >= 2000) || 'The minimum amount that a validator must stake is 2,000 AVAX!',
+            value => (value >= 2000) || 'The minimum amount that a validator must stake is 2,000 DJT!',
             value => (value <= 3000000) || 'Invalid amount!'
           ]"
         />
@@ -56,12 +56,12 @@
           v-model="stakeAmountDel"
           label="Staking Amount"
           input-class="text-right"
-          suffix="AVAX"
+          suffix="DJT"
           color="accent"
           @input="calculateDel"
           class="q-pb-xl"
           :rules="[
-            value => (value >= 25) || 'The minimum amount that a delegator must stake is 25 AVAX!',
+            value => (value >= 25) || 'The minimum amount that a delegator must stake is 25 DJT!',
             value => (value <= 2400000) || 'Invalid amount!'
           ]"
         />
@@ -155,7 +155,7 @@
             <div>
               <span>
                 {{ getFormat(rewardAvax) }}
-              </span>  <span class="text-accent text-medium">AVAX</span> |
+              </span>  <span class="text-accent text-medium">DJT</span> |
                 <span class="text-accent text-medium">{{ getSymbol(currentCurrency) }} </span>{{ getFormat(rewardUsd) }}
             </div>
           </div>
@@ -170,7 +170,7 @@
             <div>
               <span>
                 {{ getFormat(daily) }}
-              </span>  <span class="text-accent text-medium">AVAX</span>
+              </span>  <span class="text-accent text-medium">DJT</span>
             </div>
           </div>
             <div class="col-4">
@@ -178,7 +178,7 @@
             <div>
               <span>
                 {{ getFormat(monthly) }}
-              </span>  <span class="text-accent text-medium">AVAX</span>
+              </span>  <span class="text-accent text-medium">DJT</span>
             </div>
           </div>
             <div class="col-4">
@@ -186,7 +186,7 @@
             <div>
               <span>
                 {{ getFormat(yearly) }}
-              </span>  <span class="text-accent text-medium">AVAX</span>
+              </span>  <span class="text-accent text-medium">DJT</span>
             </div>
           </div>
         </div>
@@ -194,9 +194,9 @@
         <div v-if="isAdvanced && type==='validator'" class="dark-panel q-mt-sm" style="padding:10px;border-radius: 5px;">
           <div style="text-align: right;"><small>Advanced</small></div>
           <small style="opacity: 0.5;">Capacity For Delegation</small>
-          <div class="q-mb-sm">{{ capacity }} <span class="text-accent text-medium"> AVAX</span></div>
+          <div class="q-mb-sm">{{ capacity }} <span class="text-accent text-medium"> DJT</span></div>
           <small style="opacity: 0.5;">Potential Reward From Delegation with {{delegationFee2}}% Fee</small>
-          <div>{{ potentialReward }} <span class="text-accent text-medium"> AVAX</span> <small style="opacity: 0.5;"> /for the selected period and max capacity/</small></div>
+          <div>{{ potentialReward }} <span class="text-accent text-medium"> DJT</span> <small style="opacity: 0.5;"> /for the selected period and max capacity/</small></div>
         </div>
       </q-banner>
     </q-popup-proxy>

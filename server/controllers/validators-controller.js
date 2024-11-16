@@ -22,7 +22,7 @@ module.exports = {
   validators: async (endpoint) => {
     try {
       const resVal = await axios
-        .post(endpoint + '/ext/P', body('platform.getCurrentValidators'))
+        .post(endpoint + '/ext/M', body('platform.getCurrentValidators'))
       if (resVal.data.error) {
         // const error = resVal.data.error
         // const data = JSON.stringify(error)
@@ -31,7 +31,7 @@ module.exports = {
       const apiValidators = resVal.data.result
 
       const resPVal = await axios
-        .post(endpoint + '/ext/P', body('platform.getPendingValidators'))
+        .post(endpoint + '/ext/M', body('platform.getPendingValidators'))
       if (resPVal.data.error) {
         // const error = resPVal.data.error
         // const data = JSON.stringify(error)
@@ -58,7 +58,7 @@ module.exports = {
 
       let currentSupply = new BigNumber(0)
       const resCSupply = await axios
-        .post(endpoint + '/ext/P', body('platform.getCurrentSupply'))
+        .post(endpoint + '/ext/M', body('platform.getCurrentSupply'))
 
       if (!resCSupply.data.error) {
         const s = resCSupply.data.result.supply ? resCSupply.data.result.supply : 0
@@ -152,7 +152,7 @@ module.exports = {
             .find(v => v.nodeID === observers[i].nodeID)
           if (cV) {
             const response = await axios
-              .post(endpoint + '/ext/P', body('platform.getCurrentValidators'))
+              .post(endpoint + '/ext/M', body('platform.getCurrentValidators'))
   
             if (response.data.error) {
               let obsArray = observers.filter(o => o.nodeID !== observers[i].nodeID)

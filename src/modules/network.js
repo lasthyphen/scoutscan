@@ -2,7 +2,7 @@ import axios from 'axios'
 
 import { c } from './../utils/constants'
 const { network } = require('./config').default
-const server = 'https://vscout.io/v/' // 'http://localhost:5810/' //
+const server = 'http://localhost:5810' // 'http://localhost:5810/' //
 
 let id = 1
 axios.defaults.headers[c.contentTypeHeader] = c.contentTypeValue
@@ -82,7 +82,7 @@ export const _getPeerInfo = async ({ ip }) => {
   try {
     const ipRes = ip.split(':')[0]
     const req = await axios
-      .post(server + 'api/node/peer', { ip: ipRes })
+      .post(server + '', { ip: ipRes })
 
     if (!req.data) {
       throw new Error()
@@ -280,7 +280,7 @@ export const _getDefInfo = async () => {
 export const _getDefPeers = async () => {
   try {
     const req = await axios
-      .get(server + 'api/node/peers')
+      .get(server + '')
     return {
       data: {
         result: req.data

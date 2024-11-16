@@ -2,7 +2,7 @@
 	<style>
 		tspan { white-space:pre }
 		.shp0 { fill: #ffffff } 
-		.shp1 { fill: #aa7dc9;stroke: #aa7dc9;stroke-width: 0.7 } 
+		.shp1 { fill: #3fcf8e;stroke: #3fcf8e;stroke-width: 0.7 } 
 		.shp2 { fill: #674182;stroke: #674182;stroke-width: 0.7 } 
 	</style>
 	<path id="Layer 4" class="shp0" d="M0 0L109 0L109 109L0 109L0 0Z" />

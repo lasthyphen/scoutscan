@@ -10,22 +10,22 @@
               :duration="3000"
             />
           </span>
-          <span style="font-size: 13px;"><small> AVAX</small></span>
+          <span style="font-size: 13px;"><small> DJT</small></span>
         </div>
       </div>
-      <div class="col-1 q-pt-md icon">
+      <div class="col-1 q-pt-md icon icca">
         <img src="~assets/chain.svg" class="custom-icon">
       </div>
       <q-separator class="q-mt-md q-mb-md lt-md"/>
       <div class="col-md-3 col-xs-10">
-        <div class="q-pb-md text-medium label-title">STAKING RATIO <q-icon name="info" size="xs" color="secondary"><tooltip-style v-bind:text="'Staking ratio displays the percentage of AVAX staked out of the realtime total supply'" /></q-icon></div>
+        <div class="q-pb-md text-medium label-title">STAKING RATIO <q-icon name="info" size="xs" color="secondary"><tooltip-style v-bind:text="'Staking ratio displays the percentage of DJT staked out of the realtime total supply'" /></q-icon></div>
         <div>
           <span class="text-panel label-title">
             {{ stakingRatio }}
           </span><span class="label-title"> %</span>
         </div>
       </div>
-      <div class="col-1 q-pt-md icon">
+      <div class="col-1 q-pt-md icon icca">
         <img src="~assets/percent.svg" class="custom-icon">
       </div>
       <q-separator class="q-mt-md q-mb-md lt-md"/>
@@ -123,7 +123,7 @@ export default {
    max-width:30px;
  }
  .label-title {
-  font-size: max(0.7vw, 12px);
+  font-size: max(0.7vw, 14px);
  }
  .text-title1 {
     font-size: max(0.8vw, 16px);

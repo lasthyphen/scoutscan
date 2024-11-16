@@ -1,24 +1,39 @@
 
 @font-face {
-  font-family: 'Rubik-Regular';
-  src: url('~assets/fonts/Rubik-Regular.ttf') format("truetype");
+  font-family: 'Chainalysis-Regular';
+  src: url('~assets/fonts/Chainalysis-Regular.woff2') format("woff2");
 }
 
 @font-face {
-  font-family: 'Rubik-Medium';
-  src: url('~assets/fonts/Rubik-Medium.ttf') format("truetype");
-}
-
-@font-face {
-  font-family: 'Rubik-Bold';
-  src: url('~assets/fonts/Rubik-Medium.ttf') format("truetype");
+  font-family: 'Chainalysis-Bold';
+  src: url('~assets/fonts/Chainalysis-Bold.woff2') format("woff2");
 }
 
 body {
-  font-family: 'Rubik-Regular', sans-serif;
+  font-family: 'Chainalysis-Regular', sans-serif;
   word-wrap: break-word;
-  background-image: linear-gradient(45deg, #32353b 41.67%, #1c2a33 41.67%, #1c2a33 50%, #32353b 50%, #32353b 91.67%, #1c2a33 91.67%, #1c2a33 100%);
+  background-color: #FFFFFF;
   background-size: 8.49px 8.49px;
+}
+
+.q-field--outlined .q-field__control:before {
+    border: 1px solid rgb(177 177 177 / 41%) !important;
+}
+
+.q-field--outlined .q-field__control:after {
+    border: 1px solid rgba(0,0,0,0) !important;
+}
+
+.iccu {
+      filter: invert(0);
+  }
+
+.text-purple {
+  color: #000000;
+}
+
+.icca {
+    filter: brightness(0);;
 }
 
 /* width */
@@ -44,11 +59,55 @@ body {
 }
 
 .text-medium {
-  font-family: 'Rubik-Medium',sans-serif;
+  font-family: 'Chainalysis-Bold',sans-serif;
+}
+
+.text-nikka {
+  font-size: 6px;
+}
+
+.panely2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    background: none;
+    padding: 0px;
+    border: none;
+}
+
+  .q-menu {
+    background: #ffffff;
+    color: #000000;
+  }
+
+@media (max-width: $breakpoint-xs-max) {
+  .panely2 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+}
+
+@media (max-width: $breakpoint-sm-max) {
+  .panely2 {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+}
+
+.panely3 {
+    background: #f7f8fc;
+    padding: 32px;
+    border-radius: 4px;
+}
+
+.vue-world-map[data-v-a77a8494] {
+    padding: 0px 14px 0px 0px !important;
 }
 
 .text-panel {
-  color: $secondary;
+  color: #000000;
 }
 .text-pur {
   color: $purple;
@@ -58,7 +117,7 @@ body {
 }
 
 .text-bold {
-  font-family: 'Rubik-Bold',sans-serif;
+  font-family: 'Chainalysis-Bold',sans-serif;
 }
 .panel{
   background:  #fefaff;
@@ -66,8 +125,24 @@ body {
 }
 
 .panel2 {
-  background:  #fefaff;
+  background:  #f7f8fc;
   color: #32353b;
+}
+
+.q-field--dark .q-field__control:before {
+    border-color: transparent !important;
+}
+
+.q-field--dark .q-field__control:after {
+    border-color: transparent !important;
+}
+
+.q-card {
+    box-shadow: none;
+}
+
+.q-separator {
+    background: #2d2d2d1f;
 }
 
 .ch5 {

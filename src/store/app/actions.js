@@ -147,7 +147,7 @@ async function initEndpoint (
   try {
     const endpoint = getters.networkEndpoint
     if (!endpoint.url) throw new Error()
-    if (endpoint.name === 'Avalanche Mainnet') {
+    if (endpoint.name === 'Dijets Mainnet') {
       const endpoint = network.endpointUrls[0]
       commit(SET_ENDPOINT, { endpoint })
     }
@@ -231,9 +231,9 @@ async function getValidators (
       const arr = []
       arr.push(rows
         .find(a => (a.nodeID.toLowerCase() ===
-         'NodeID-2KfgS6P7vf9L55fMRTbHPgS4ugVSDW3nj'.toLowerCase())))
+         'NodeID-LbqzrSMKAssm5Ds2bJ8LPwymnGJbrybCN'.toLowerCase())))
       rows = rows
-        .filter(a => a.nodeID !== 'NodeID-2KfgS6P7vf9L55fMRTbHPgS4ugVSDW3nj')
+        .filter(a => a.nodeID !== 'NodeID-LbqzrSMKAssm5Ds2bJ8LPwymnGJbrybCN')
       rows = arr.concat(rows)
 
       // Commit data
@@ -615,7 +615,7 @@ async function getBlockchains (
     id: network.defaultSubnetID,
     subnetID: network.defaultSubnetID,
     vmID: '',
-    name: 'P-Chain'
+    name: 'M-Chain'
   })
 
   blockchains = await Promise.all(blockchains
@@ -636,7 +636,7 @@ async function getBlockchains (
 
   commit(GET_BLOCKCHAINS, { blockchains })
   if (!getters.currentBlockchain.id) {
-    const xChain = blockchains.find(b => b.name === 'X-Chain')
+    const xChain = blockchains.find(b => b.name === 'Value Chain')
     commit(SET_CURRENT_BLOCKCHAIN, { blockchain: xChain })
   }
 }
